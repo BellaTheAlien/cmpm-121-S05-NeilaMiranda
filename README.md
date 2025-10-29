@@ -1,40 +1,11 @@
 # Section 5 – Refactoring Code Smells in Practice
 
-This activity is designed to help you practice identifying code smells and applying refactoring patterns to a real codebase in CMPM 121, Game Development Patterns.
+For this activity I had to practice refactoring some smelly code.
 
-## Assignment Instructions
+## What was refactored
 
-For this assignment, your task is to **analyze and improve the code in `src/main.ts`**:
+First I had renamed all the values into more readable and clearn names, for eaxmple the reset button was "bR" so i changed it into "reset". Thay way the values can be easy to understand.
 
-1. **Identify code smells**: Review the code and look for patterns that may cause maintenance issues, reduce readability, or introduce potential bugs.
-2. **Refactor**: Apply **refactoring patterns** as described in Fowler’s _Refactoring_ book to improve the code.
-3. **Document your work**: Once you have completed your refactoring:
-   - Rewrite this README.md
-   - List the **code smells** you identified
-   - Describe the **refactoring patterns** you applied and how they improved the code
+Next, I cleaned up some of the bloted comments, I got rid of the ones that seeme to be repeated and added some simpaler comments.
 
-## Getting Started
-
-With Codespaces (or another environment supporting devcontainers):
-
-1. Run `deno task dev` to start the development server
-
-Without Codespaces (local VS Code):
-
-1. Install the [Deno](https://docs.deno.com/runtime/getting_started/installation/) runtime.
-2. Install the Deno VS Code extension (must be done only after installing Deno runtime).
-3. Run `./setup-hooks.sh` to enable pre-commit quality checks
-4. Run `deno task dev` to start the development server
-
-The setup script configures Git hooks to automatically run formatting, linting, and type checking before commits.
-
-## Deployment
-
-This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
-
-### Setup GitHub Pages Deployment
-
-1. Go to your repository's Settings → Pages
-2. Under "Source", select "GitHub Actions"
-3. The workflow will automatically deploy on pushes to the `main` branch
-4. Your site will be published at `https://<your-github-username>.github.io/<repository-name>/`
+Finally, I noted that the last two line of code in each event listener was repeated so I created a function called "document_change" to handle the changes done on the page. This is an example of having repeated code smell (stink), so creating a function will clean it up just a little bit.
